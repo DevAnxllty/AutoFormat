@@ -1,5 +1,6 @@
-<img src="Img/waves.svg">
 # AutoFormat
+<img src="https://raw.githubusercontent.com/DevDodger/Krofit/main/Img/waves.svg">
+
 You need to add the script into your game, https://www.roblox.com/library/13737311032/AutoFormat
 
 I made this using gsub & patterns
