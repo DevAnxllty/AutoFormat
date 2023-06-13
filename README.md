@@ -1,7 +1,19 @@
 # AutoFormat
 You need to add the model into your game, https://www.roblox.com/library/13737311032/AutoFormat
 
-If you want to add a filtering system you need to change your code to,
+# Types of Formatting
+
+| Character | Type | Preview |
+| ------------- | ------------- | ------------- |
+| #  | Bold  | **Hello World!** |
+| *  | Italic  | *Hello World!* |
+| ~  | Strike Through | ~~Hello World!~~ |
+| _  | Underline | <ins>Hello World!</ins> |
+
+> You need to wrap the character around the text.
+
+# Filtering
+If you want to add a filtering system you need your code to look something like this,
 
 ```lua
 local TextService = game:GetService("TextService")
@@ -15,17 +27,18 @@ Players.PlayerAdded:Connect(function(player)
 		-- Italic formatting with underscore
 		text = text:gsub("*(.-)*", "<i>%1</i>")
 
-		-- Bold formatting with pound/hashtag symbol
+		-- Bold formatting
 		text = text:gsub("#(.-)#", "<b>%1</b>")
+		
+		--Underline formatting
+		text = text:gsub("_(.-)_", "<u>%1</u>")
 
-		text = TextService:FilterStringAsync(text, player.UserId):GetChatForUserAsync(player.UserId)
+		text = TextService:FilterStringAsync(text, player.UserId):GetChatForUserAsync(player.UserId) -- The Filterer
 
 		return text
 	end
 
-	local text = FormatText("~*#Hello World!#*~")
-	print(text) -- Since this is a print, it won't format it
-
-	-- If you use a text label with Rich Text on, then it will format
+	local text = FormatText("_~*#Hello World!#*~_")
+	print(text)
 end)
 ```
