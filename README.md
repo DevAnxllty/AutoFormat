@@ -1,5 +1,5 @@
 # AutoFormat
-You need to add the model into your game, https://www.roblox.com/library/13737311032/AutoFormat
+You need to add the script into your game, https://www.roblox.com/library/13737311032/AutoFormat
 
 # Types of Formatting
 
