@@ -35,7 +35,8 @@ Players.PlayerAdded:Connect(function(player)
 		--Underline formatting
 		text = text:gsub("_(.-)_", "<u>%1</u>")
 
-		text = TextService:FilterStringAsync(text, player.UserId):GetChatForUserAsync(player.UserId) -- The Filterer
+		-- Filterer		
+		text = TextService:FilterStringAsync(text, player.UserId):GetChatForUserAsync(player.UserId)
 
 		return text
 	end
