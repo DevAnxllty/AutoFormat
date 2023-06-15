@@ -17,7 +17,7 @@ I made this using gsub & patterns
 > You need to wrap the character around the text.
 
 # Filtering
-If you want to add a filtering system you need your code to look something like this,
+If you want to add a filtering system you need your script (not local script) to look something like this,
 
 ```lua
 local TextService = game:GetService("TextService")
